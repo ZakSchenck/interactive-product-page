@@ -1,2 +1,3 @@
-# interactive product page
+# Interactive Product Page.
+*Wireframe and graphics provided by Frontend Mentor*
  
