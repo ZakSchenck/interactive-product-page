@@ -100,8 +100,8 @@ h4 {
     margin-top: 10px;
 }
 
-.cart-container:hover {
-    cursor: pointer
+#cart-image:hover {
+    cursor: pointer;
 }
 
 .cart-value {
@@ -157,7 +157,6 @@ h4 {
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 15px;
-    width: 1005;
 }
 
 #delete-img {
@@ -166,6 +165,10 @@ h4 {
     right: 24px;
     display: none;
     z-index: 80;
+}
+
+#delete-img:hover {
+    cursor: pointer;
 }
 
 #profile-picture {
@@ -200,6 +203,16 @@ h4 {
 }
 
 #close-hamburger:hover {
+    cursor: pointer;
+}
+
+#close-cart {
+    position: absolute;
+    right: 10px;
+    top: 22px;
+}
+
+#close-cart:hover {
     cursor: pointer;
 }
 
@@ -462,7 +475,7 @@ h4 {
 }
 
 .lightbox-x {
-    color: white; 
+    color: var(--theme-color); 
     position: fixed;
     font-size: 30px;
     top: 30px;

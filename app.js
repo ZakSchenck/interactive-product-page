@@ -18,13 +18,15 @@ const plusItem = document.querySelector('.operator-img-plus');
 let cartNumber = document.getElementById('added-number');
 let cartValue = document.querySelector('.cart-value');
 const addItemButton = document.getElementById('add-item-button');
-const cartButton = document.querySelector('.dropdown-container');
+// Cart/dropdown variables
+const cartButton = document.getElementById('cart-image');
 const cartContent = document.querySelector('.dropdown-content');
 let checkoutNumber = document.getElementById('checkout-number');
 let totalPrice = document.getElementById('total-price');
 let checkoutRow = document.querySelector('.checkout-row');
 const emptyCart = document.getElementById('empty-cart');
 const cartDelete = document.querySelector('#delete-img')
+const closeCartButton = document.getElementById('close-cart')
 // Hamburger menu variables
 const hamburgerMenu = document.getElementById('hamburger-menu');
 const closeHamburgerMenu = document.getElementById('close-hamburger');
@@ -32,7 +34,6 @@ const navbarContainer = document.querySelector('.navbar-container');
 const navbarContainerItems = document.querySelectorAll('.nav-item');
 
 // Hamburger Menu open and close event listeners
-
 // Open Hamburger menu
 hamburgerMenu.addEventListener('click', () => {
     navbarContainer.style.width = '280px';
@@ -69,8 +70,12 @@ cartDelete.addEventListener('click', () => {
 
 // Opens cart dropdown menu
 cartButton.addEventListener('click', () => {
-    cartContent.classList.toggle('openmenu')
+    cartContent.style.display = 'block';
 }) 
+
+closeCartButton.addEventListener('click', () => {
+    cartContent.style.display = 'none';
+})
 
 // increases/decreases add to cart number 
 minusItem.addEventListener('click', () => {
