@@ -37,9 +37,9 @@ const navbarContainerItems = document.querySelectorAll('.nav-item');
 hamburgerMenu.addEventListener('click', () => {
     navbarContainer.style.width = '280px';
     navbarContainer.style.height = '100vh';
-    closeHamburgerMenu.style.opacity = '1'
+    closeHamburgerMenu.style.display = 'block';
     for (let i = 0; i <= navbarContainerItems.length; i++) {
-        navbarContainerItems[i].style.opacity = '1';
+        navbarContainerItems[i].style.display = 'flex';
     }
 });
 
@@ -47,9 +47,9 @@ hamburgerMenu.addEventListener('click', () => {
 closeHamburgerMenu.addEventListener('click', () => {
     navbarContainer.style.width = '0';
     navbarContainer.style.height = '0';
-    closeHamburgerMenu.style.opacity = '0';
+    closeHamburgerMenu.style.display = 'none';
     for (let i = 0; i <= navbarContainerItems.length; i++) {
-        navbarContainerItems[i].style.opacity = '0';
+        navbarContainerItems[i].style.display = 'none';
     }
 })
 

@@ -195,7 +195,7 @@ h4 {
 #close-hamburger {
     position: absolute;
     top: 10px;
-    opacity: 0;
+    display: none;
     left: 10px;
 }
 
@@ -543,8 +543,7 @@ h4 {
         padding: 10px;
         color: black;
         font-weight: bold;
-        opacity: 0;
-        transition: .6s;
+        display: none;
     }
     .navbar-container li a:hover {
         color: var(--theme-color);
