@@ -126,7 +126,7 @@ h4 {
     width: 275px;
     height: 200px;
     background-color: white;
-    right: -58px;
+    right: -38px;
     border-radius: 7px;
     box-shadow: 6px 6px 20px gray;
     display: none;
@@ -179,6 +179,28 @@ h4 {
     flex-direction: row;
     align-items: center;
     margin-left: auto;
+}
+
+#hamburger-menu {
+    display: none;
+    position: absolute;
+    left: 10px;
+    margin-top: 1px;
+}
+
+#hamburger-menu:hover {
+    cursor: pointer;
+}
+
+#close-hamburger {
+    position: absolute;
+    top: 10px;
+    opacity: 0;
+    left: 10px;
+}
+
+#close-hamburger:hover {
+    cursor: pointer;
 }
 
 /* Main Body */
@@ -463,6 +485,9 @@ h4 {
         margin-left:  auto;
         margin-right: auto;
     }
+    #logo {
+        margin-left: 40px;
+    }
     .gallery-container {
         width: 100%;
     }
@@ -501,7 +526,36 @@ h4 {
 /* 1000px */ 
 @media all and (max-width: 1000px) {
     .navbar-container {
-        display: none;
+        position: fixed;
+        flex-direction: column;
+        top: -17px;
+        height: 0;
+        background-color:#ededed;
+        width: 0px;
+        z-index: 300;
+        box-shadow: 3px 3px 30px gray;
+        transition: .5s;
+    }
+    .navbar-container li a{
+        width: 0;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 10px;
+        color: black;
+        font-weight: bold;
+        opacity: 0;
+        transition: .6s;
+    }
+    .navbar-container li a:hover {
+        color: var(--theme-color);
+        border: none;
+    }
+    .navbar-container li:hover {
+        color: var(--theme-color);
+        border: none;
+    }
+    #hamburger-menu {
+        display: block;
     }
     .header-container {
         margin: 0;
@@ -541,6 +595,13 @@ h4 {
         align-items: center;
         justify-content: center;
         gap: 20px;
+    }
+    .shop-section {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    #profile-picture {
+        margin-left: 10px;
     }
 }
 

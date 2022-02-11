@@ -25,6 +25,34 @@ let totalPrice = document.getElementById('total-price');
 let checkoutRow = document.querySelector('.checkout-row');
 const emptyCart = document.getElementById('empty-cart');
 const cartDelete = document.querySelector('#delete-img')
+// Hamburger menu variables
+const hamburgerMenu = document.getElementById('hamburger-menu');
+const closeHamburgerMenu = document.getElementById('close-hamburger');
+const navbarContainer = document.querySelector('.navbar-container');
+const navbarContainerItems = document.querySelectorAll('.nav-item');
+
+// Hamburger Menu open and close event listeners
+
+// Open Hamburger menu
+hamburgerMenu.addEventListener('click', () => {
+    navbarContainer.style.width = '280px';
+    navbarContainer.style.height = '100vh';
+    closeHamburgerMenu.style.opacity = '1'
+    for (let i = 0; i <= navbarContainerItems.length; i++) {
+        navbarContainerItems[i].style.opacity = '1';
+    }
+});
+
+// Close Hamburger menu
+closeHamburgerMenu.addEventListener('click', () => {
+    navbarContainer.style.width = '0';
+    navbarContainer.style.height = '0';
+    closeHamburgerMenu.style.opacity = '0';
+    for (let i = 0; i <= navbarContainerItems.length; i++) {
+        navbarContainerItems[i].style.opacity = '0';
+    }
+})
+
 // setting counter variable for later
 let counter = 0;
 let cartCounter = 0;
