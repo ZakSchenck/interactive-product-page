@@ -9,5 +9,5 @@ The features include:
 - Hamburger Menu animation
 - Ability to add and clear cart
 - Delete items from cart
--
+
  
